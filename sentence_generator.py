@@ -23,13 +23,27 @@ class SentenceGenerator:
             ]
         )
 
+        # The response from OpenAI is an object with a 'choices' list,
+        # each choice has a 'message' object with 'content' attribute
+        try:
+            # Assuming the API correctly formats the response as expected
+            words = json.loads(response.choices[0].message.content.strip())
+        except json.JSONDecodeError:
+            print("Failed to parse response as JSON.")
+            return None, None
+
+        # Use JSON to replace tags in sentence and tree
+        filled_sentence = selected_pair["skeleton"]
+        filled_tree = selected_pair["tree"]
+
+        for key, value in words.items():
+            filled_sentence = filled_sentence.replace(f"<{key}>", value)
+            filled_tree = filled_tree.replace(f"<{key}>", value)
+
         # Testing response
         print(response)
 
-        # Use JSON to replace tags in sentence and tree
-        # TODO
-
-        #return filled_sentence, filled_tree
+        return filled_sentence, filled_tree
 
 def load_sentence_tree_pairs(filepath='sentence_tree_pairs.json'):
     with open(filepath, 'r') as file:
@@ -39,7 +53,6 @@ def load_sentence_tree_pairs(filepath='sentence_tree_pairs.json'):
 # For testing
 if __name__ == '__main__':
     generator = SentenceGenerator(openai_api_key=os.getenv('OPENAI_API_KEY'))
-#    sentence, tree = generator.generate_filled_sentence_and_tree()
-    generator.generate_filled_sentence_and_tree()
-#    print("Generated Sentence:", sentence)
-#    print("Syntax Tree:", tree)
+    sentence, tree = generator.generate_filled_sentence_and_tree()
+    print("Generated Sentence:", sentence)
+    print("Syntax Tree:", tree)
