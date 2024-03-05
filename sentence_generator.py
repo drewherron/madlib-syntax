@@ -1,4 +1,5 @@
 from openai import OpenAI
+import os
 import json
 import random
 
@@ -18,3 +19,10 @@ def load_sentence_tree_pairs(filepath='sentence_tree_pairs.json'):
         with open(filepath, 'r') as file:
         pairs = json.load(file)
     return pairs
+
+# For testing
+if __name__ == '__main__':
+    generator = SentenceGenerator(openai_api_key=os.getenv('OPENAI_API_KEY'))
+    sentence, tree = generator.generate_filled_sentence_and_tree()
+    print("Generated Sentence:", sentence)
+    print("Syntax Tree:", tree)
