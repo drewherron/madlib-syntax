@@ -1,0 +1,10 @@
+[
+    {
+        "skeleton": "The <noun1> <present_verb> the <adj> <noun2>",
+        "tree": "(CP (C' (C \u2205) (TP  (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T [+PAST]) (VP (V' (V <present_verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adj>))) (N' (N <noun2>))))))))))))"
+    },
+    {
+        "skeleton": "The <noun1> <past_verb> the <adj> <noun2>",
+        "tree": "(CP (C' (C \u2205) (TP  (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T [+PAST]) (VP (V' (V <past_verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adj>))) (N' (N <noun2>))))))))))))"
+    }
+]
