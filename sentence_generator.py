@@ -8,19 +8,25 @@ import random
 class SentenceGenerator:
     def __init__(self, openai_api_key):
         self.client = OpenAI(api_key=openai_api_key)
+        self.themes = load_themes()
         self.sentence_tree_pairs = load_sentence_tree_pairs()
 
 
     def generate_filled_sentence_and_tree(self):
         # Select a pair randomly from the file
         selected_pair = random.choice(self.sentence_tree_pairs)
+        print(selected_pair)
+        selected_theme = random.choice(self.themes)
+        print(selected_theme)
         # Send skeleton to GPT, get JSON back
+        my_prompt = [
+                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "user", "content": f"Given the sentence structure: '{selected_pair['skeleton']}', generate a word for each placeholder in angle brackets, to form a grammatically correct sentence with a general theme: {selected_theme}. Return the answer in JSON format, with the original placeholders as keys and your new words as values. Provide no additional information or explanation."}
+            ]
+        print(my_prompt)
         response = self.client.chat.completions.create(
             model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": f"Given the sentence structure: '{selected_pair['skeleton']}', generate a grammatically correct word for each placeholder. Return the answer in JSON format, with the original placeholders as keys and your new words as values. Provide no additional information or explanation."}
-            ]
+            messages=my_prompt
         )
 
         # The response from OpenAI is an object with a 'choices' list,
@@ -44,6 +50,11 @@ class SentenceGenerator:
         print(response)
 
         return filled_sentence, filled_tree
+
+def load_themes(filepath='themes.json'):
+    with open(filepath, 'r') as file:
+        themes = json.load(file)
+    return themes
 
 def load_sentence_tree_pairs(filepath='sentence_tree_pairs.json'):
     with open(filepath, 'r') as file:
