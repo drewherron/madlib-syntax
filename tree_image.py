@@ -1,12 +1,24 @@
+# tree_image.py
+import sys
+#sys.path.insert(0, '/Projects/svgling')
 import svgling
+#sys.path.remove('/Projects/svgling')
 from nltk.tree import Tree
 
-def generate_syntax_tree_image(tree_structure,  output_filepath='static/images/last_tree.svg'):
+def generate_syntax_tree_image(tree_structure, tree_movement, output_filepath='static/images/last_tree.svg'):
     # Parse the tree structure
     tree = Tree.fromstring(tree_structure)
 
     # Draw the tree with svgling
     tree_figure = svgling.draw_tree(tree)
+
+    # Apply movement arrows if provided
+    if tree_movement:
+        # Convert list of lists to tuple of tuples for movement_arrow function
+        for move in tree_movement:
+            # Convert each pair in the list to a tuple
+            start, end = map(tuple, move)
+            tree_figure.movement_arrow(start, end)
 
     svg_output = tree_figure.get_svg()._repr_svg_()
 
