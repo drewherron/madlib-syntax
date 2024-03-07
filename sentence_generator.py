@@ -19,14 +19,14 @@ class SentenceGenerator:
         selected_theme = random.choice(self.themes)
         print(selected_theme)
         # Send skeleton to GPT, get JSON back
-        my_prompt = [
+        custom_prompt = [
                 {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": f"Given the sentence structure: '{selected_pair['skeleton']}', generate a word for each placeholder in angle brackets, to form a grammatically correct sentence with a general theme: {selected_theme}. Return the answer in JSON format, with the original placeholders as keys and your new words as values. Provide no additional information or explanation."}
             ]
-        print(my_prompt)
+        print(custom_prompt)
         response = self.client.chat.completions.create(
             model="gpt-3.5-turbo",
-            messages=my_prompt
+            messages=custom_prompt
         )
 
         # The response from OpenAI is an object with a 'choices' list,
@@ -34,6 +34,9 @@ class SentenceGenerator:
         try:
             # Assuming the API correctly formats the response as expected
             words = json.loads(response.choices[0].message.content.strip())
+            # In case ChatGPT keeps the bracket format
+            normalized_words = {key.strip("<>"): value for key, value in words.items()}
+
         except json.JSONDecodeError:
             print("Failed to parse response as JSON.")
             return None, None
@@ -42,7 +45,7 @@ class SentenceGenerator:
         filled_sentence = selected_pair["skeleton"]
         filled_tree = selected_pair["tree"]
 
-        for key, value in words.items():
+        for key, value in normalized_words.items():
             filled_sentence = filled_sentence.replace(f"<{key}>", value)
             filled_tree = filled_tree.replace(f"<{key}>", value)
 
