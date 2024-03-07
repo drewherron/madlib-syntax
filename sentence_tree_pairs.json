@@ -12,4 +12,16 @@
         "tree": "(CP (C' (C Could) (TP (DP (D' (D \u2205) (NP (N' (N <pronoun>))))) (T' (T [-PAST]) (ProgP (Prog' (Prog be) (VP (V' (V <verb-ing>)))))))))",
         "arrow": [[[0,1,1,0],[0,0]]]
     }
+    {
+        "skeleton": "<noun1> <present_verb> <noun2>'s <noun3>",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D \u2205) (NP (N' (N <noun1>))))) (T' (T [-PAST]) (VP (V' (V <present_verb>) (DP (DP (D' (D \u2205) (NP (N' (N <noun2>))))) (D' (D 's) (NP (N' (N <noun3>)))))))))))"
+    },
+    {
+        "skeleton": "<noun1> <past_verb> <noun2>'s <noun3>",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D \u2205) (NP (N' (N <noun1>))))) (T' (T [+past]) (VP (V' (V <present_verb>) (DP (DP (D' (D \u2205) (NP (N' (N <noun2>))))) (D' (D 's) (NP (N' (N <noun3>)))))))))))"
+    },
+    {
+        "skeleton": "<pronoun> <auxiliary_verb> <verb> <possessive_pronoun> <noun>",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D \u2205) (NP (N' (N <pronoun>))))) (T' (T <auxiliary_verb>) (VP (V' (V <verb>) (DP (D' (D <possessive_pronoun>) (NP (N' (N <noun1>)))))))))))"
+    }
 ]
