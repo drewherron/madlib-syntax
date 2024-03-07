@@ -11,7 +11,6 @@ class SentenceGenerator:
         self.themes = load_themes()
         self.sentence_tree_pairs = load_sentence_tree_pairs()
 
-
     def generate_filled_sentence_and_tree(self):
         # Select a pair randomly from the file
         selected_pair = random.choice(self.sentence_tree_pairs)
@@ -39,11 +38,12 @@ class SentenceGenerator:
 
         except json.JSONDecodeError:
             print("Failed to parse response as JSON.")
-            return None, None
+            return None, None, None
 
         # Use JSON to replace tags in sentence and tree
         filled_sentence = selected_pair["skeleton"]
         filled_tree = selected_pair["tree"]
+        tree_movement = selected_pair["arrow"] if "arrow" in selected_pair else None
 
         for key, value in normalized_words.items():
             filled_sentence = filled_sentence.replace(f"<{key}>", value)
@@ -52,7 +52,7 @@ class SentenceGenerator:
         # Testing response
         print(response)
 
-        return filled_sentence, filled_tree
+        return filled_sentence, filled_tree, tree_movement
 
 def load_themes(filepath='themes.json'):
     with open(filepath, 'r') as file:
@@ -67,6 +67,7 @@ def load_sentence_tree_pairs(filepath='sentence_tree_pairs.json'):
 # For testing
 if __name__ == '__main__':
     generator = SentenceGenerator(openai_api_key=os.getenv('OPENAI_API_KEY'))
-    sentence, tree = generator.generate_filled_sentence_and_tree()
+    sentence, tree, movement = generator.generate_filled_sentence_and_tree()
     print("Generated Sentence:", sentence)
     print("Syntax Tree:", tree)
+    print("Movement:", movement)

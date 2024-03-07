@@ -6,5 +6,10 @@
     {
         "skeleton": "The <noun1> <past_verb> the <adj> <noun2>",
         "tree": "(CP (C' (C \u2205) (TP  (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T [+PAST]) (VP (V' (V <past_verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adj>))) (N' (N <noun2>))))))))))))"
+    },
+    {
+        "skeleton": "Could <pronoun> be <verb-ing>?",
+        "tree": "(CP (C' (C Could) (TP (DP (D' (D \u2205) (NP (N' (N <pronoun>))))) (T' (T [-PAST]) (ProgP (Prog' (Prog be) (VP (V' (V <verb-ing>)))))))))",
+        "arrow": [[[0,1,1,0],[0,0]]]
     }
 ]
