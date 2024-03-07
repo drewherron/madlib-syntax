@@ -31,6 +31,6 @@ if __name__ == '__main__':
     filepath = "test_tree.svg"
     test_tree_structure = "(CP (C' (C \u2205) (TP (DP (D' (D \u2205) (NP (N' (N She))))) (T' (T [-PAST]) (ProgP (Prog' (Prog is)  (VP (V' (AdvP (Adv' (Adv probably))) (V' (V' (V having) (DP (D' (D a) (NP (N' (N snack)))))) (PP (P' (P without) (DP (D' (D \u2205) (NP (N' (N me)))))))) ) )))))))"
 
-    generate_syntax_tree_image(test_tree_structure, filepath)
+    generate_syntax_tree_image(test_tree_structure, None, filepath)
     print(f"Saved the SVG of the provided tree structure to {filepath}.")
 
