@@ -1,0 +1,32 @@
+<!-- index.html -->
+{% extends "layout.html" %}
+{% block content %}
+<h2>Syntax Tree Practice</h2>
+
+<!-- The generated sentence -->
+<div class="sentence">
+  <h3>Sentence:</h3>
+  <p>{{ sentence }}</p>
+</div>
+
+<!-- Div for the syntax tree, initially hidden -->
+<div class="tree-container" style="display:none;">
+  <h3>Tree:</h3>
+  <img src="{{ tree_image_path }}" alt="Syntax Tree">
+</div>
+
+<!-- Buttons -->
+<div class="buttons">
+  <button onclick="revealTree();">Reveal Tree</button>
+  <button onclick="location.reload();">Refresh</button>
+</div>
+
+<script>
+  // Show the syntax tree
+  function revealTree() {
+      const treeContainer = document.querySelector('.tree-container');
+      treeContainer.style.display = 'block';
+  }
+</script>
+
+{% endblock %}
