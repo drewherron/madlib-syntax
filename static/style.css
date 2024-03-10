@@ -12,3 +12,17 @@ a, h1, h2 { color: #00008F; }
     padding:.1em;
     width: 504px;
 }
+.gif-container {
+    text-align: center;
+    margin: 20px 0;
+}
+.gif-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.gif-container p {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 10px;
+}
