@@ -11,16 +11,8 @@ def fetch_gif_url(query):
         'rating': 'pg'
     }
     response = requests.get(base_url, params=params)
-    print(f"\nRESPONSE:\n{response}")
     if response.status_code == 200:
-#        data = response.json()
-#        if data['data']:
-#            gif_url = data['data'][0]['images']['original']['url']
-#            return gif_url
-#    return None
-
         data = response.json()
-        print(f"\nDATA:\n{data}")
         if data['data']:
             downsized = data['data'][0]['images']['downsized']['url']
             return downsized
