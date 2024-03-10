@@ -4,6 +4,7 @@ from sentence_generator import SentenceGenerator
 from tree_image import generate_syntax_tree_image
 from related_gif import fetch_gif_url
 #from tree_model import get_model
+import requests
 import uuid
 import os
 
