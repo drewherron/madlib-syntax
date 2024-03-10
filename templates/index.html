@@ -1,12 +1,18 @@
 <!-- index.html -->
 {% extends "layout.html" %}
 {% block content %}
-<h2>Syntax Tree Practice</h2>
+<h2>X-Bar Practice</h2>
 
 <!-- The generated sentence -->
 <div class="sentence">
   <h3>Sentence:</h3>
   <p>{{ sentence }}</p>
+</div>
+
+<!-- Div for the GIF -->
+<div class="gif-container">
+  <img src="{{ related_gif_url }}" alt="A related GIF" onclick="revealTree()" style="cursor:pointer;">
+  <p>(Potentially related gif powered by Giphy)</p>
 </div>
 
 <!-- Div for the syntax tree, initially hidden -->
