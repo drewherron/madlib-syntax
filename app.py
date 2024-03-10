@@ -15,7 +15,17 @@ generator = SentenceGenerator(openai_api_key=os.getenv('OPENAI_API_KEY'))
 @app.route('/')
 def index():
 
-    sentence, tree_structure, tree_movement = generator.generate_filled_sentence_and_tree()
+    sentence, tree_structure, tree_movement = None, None, None
+    retry_delay = 2
+    max_retries = 5
+    attempts = 0
+
+    while sentence is None and attempts < max_retries:
+        sentence, tree_structure, tree_movement = generator.generate_filled_sentence_and_tree()
+        if sentence is None:
+            print("Failed fetching sentence, retrying...")
+            time.sleep(retry_delay)
+            attempts += 1
 
     tree_image_path = f"static/images/syntax_tree_{uuid.uuid4()}.svg"
     generate_syntax_tree_image(tree_structure, tree_movement, tree_image_path)
