@@ -16,16 +16,20 @@
 </div>
 
 <!-- Buttons -->
-<div class="buttons">
-  <button onclick="revealTree();">Reveal Tree</button>
+<div class="buttons" style="display:none;">
+  <!-- <button onclick="revealTree();">Reveal Tree</button> -->
   <button onclick="location.reload();">Refresh</button>
 </div>
 
 <script>
   // Show the syntax tree
   function revealTree() {
+      const gifContainer = document.querySelector('.gif-container');
       const treeContainer = document.querySelector('.tree-container');
+      const buttonContainer = document.querySelector('.buttons');
+      gifContainer.style.display = 'none';
       treeContainer.style.display = 'block';
+      buttonContainer.style.display = 'block';
   }
 </script>
 
