@@ -8,17 +8,12 @@
         "tree": "(CP (C' (C \u2205) (TP  (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T [+PAST]) (VP (V' (V <simple_past_verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adj>))) (N' (N <noun2>))))))))))))"
     },
     {
-        "skeleton": "Could <pronoun> be <progressive_verb>?",
-        "tree": "(CP (C' (C Could) (TP (DP (D' (D \u2205) (NP (N' (N <pronoun>))))) (T' (T [-PAST]) (ProgP (Prog' (Prog be) (VP (V' (V <progressive_verb>)))))))))",
-        "arrow": [[[0,1,1,0],[0,0]]]
+        "skeleton": "The <noun1> <simple_present_verb> the <noun2>'s <noun3>",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T [-PAST]) (VP (V' (V <simple_present_verb>) (DP (DP (D' (D the) (NP (N' (N <noun2>))))) (D' (D 's) (NP (N' (N <noun3>)))))))))))"
     },
     {
-        "skeleton": "<noun1> <simple_present_verb> <noun2>'s <noun3>",
-        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T [-PAST]) (VP (V' (V <simple_present_verb>) (DP (DP (D' (D \u2205) (NP (N' (N <noun2>))))) (D' (D 's) (NP (N' (N <noun3>)))))))))))"
-    },
-    {
-        "skeleton": "<noun1> <simple_past_verb> <noun2>'s <noun3>",
-        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T [+PAST]) (VP (V' (V <simple_past_verb>) (DP (DP (D' (D \u2205) (NP (N' (N <noun2>))))) (D' (D 's) (NP (N' (N <noun3>)))))))))))"
+        "skeleton": "The <noun1> <simple_past_verb> the <noun2>'s <noun3>",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T [+PAST]) (VP (V' (V <simple_past_verb>) (DP (DP (D' (D the) (NP (N' (N <noun2>))))) (D' (D 's) (NP (N' (N <noun3>)))))))))))"
     },
     {
         "skeleton": "<pronoun> <modal_verb> <main_verb> <possessive_pronoun> <noun1>",
