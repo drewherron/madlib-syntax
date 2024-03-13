@@ -9,23 +9,38 @@
   <p>{{ sentence }}</p>
 </div>
 
-<!-- Div for the GIF -->
-<div class="gif-container">
-  <img src="{{ related_gif_url }}" alt="A related GIF" onclick="revealTree()" style="cursor:pointer;">
-  <p>(Potentially related gif powered by Giphy)</p>
+<!-- Container for the GIF/tree, centered -->
+<div class="content-container">
+  <div class="gif-container">
+    <img src="{{ related_gif_url }}" alt="A related GIF" onclick="revealTree()" style="cursor:pointer;">
+    <p>(Potentially related gif powered by Giphy)</p>
+  </div>
+
+  <!-- Div for the syntax tree, initially hidden -->
+  <div class="tree-container" style="display:none;">
+    <h3>Tree:</h3>
+    <img src="{{ tree_image_path }}" alt="Syntax Tree">
+  </div>
 </div>
 
-<!-- Div for the syntax tree, initially hidden -->
-<div class="tree-container" style="display:none;">
-  <h3>Tree:</h3>
-  <img src="{{ tree_image_path }}" alt="Syntax Tree">
+<div class="button-container">
+  <!-- Switch on the left -->
+  <div class="flag-switch-container">
+    <div class="flag-switch">
+      <label>
+        <input type="checkbox" id="flagSwitch" onchange="handleFlagChange()" {{ 'checked' if arrow_flag else '' }}>
+        <span class="slider round"></span>  <!-- This is the slider -->
+      </label>
+    </div>
+    <p>Allow movement</p>
+  </div>
+
+  <!-- Refresh button on the right -->
+  <div class="buttons" style="display:none;">
+    <button onclick="location.reload();">Refresh</button>
+  </div>
 </div>
 
-<!-- Buttons -->
-<div class="buttons" style="display:none;">
-  <!-- <button onclick="revealTree();">Reveal Tree</button> -->
-  <button onclick="location.reload();">Refresh</button>
-</div>
 
 <script>
   // Show the syntax tree
@@ -36,6 +51,12 @@
       gifContainer.style.display = 'none';
       treeContainer.style.display = 'block';
       buttonContainer.style.display = 'block';
+  }
+
+  // Reload page with switch change
+  function handleFlagChange() {
+    const isChecked = document.getElementById('flagSwitch').checked;
+    window.location.href = `/?arrow_flag=${isChecked}`;
   }
 </script>
 
