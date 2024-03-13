@@ -41,6 +41,18 @@
   </div>
 </div>
 
+<!-- Question mark icon -->
+<div id="help-icon-container">
+  <img src="{{ url_for('static', filename='images/question-mark.png') }}" alt="Help" id="help-icon">
+</div>
+
+<!-- Popup container -->
+<div id="popup-container" class="hidden">
+  <div id="popup-content">
+    <p>Information about the app will go here.</p>
+    <button id="close-popup">Close</button>
+  </div>
+</div>
 
 <script>
   // Show the syntax tree
@@ -58,6 +70,16 @@
     const isChecked = document.getElementById('flagSwitch').checked;
     window.location.href = `/?arrow_flag=${isChecked}`;
   }
+
+  // Info popup
+  document.getElementById('help-icon').onclick = function() {
+      document.getElementById('popup-container').style.visibility = 'visible';
+  };
+
+  document.getElementById('close-popup').onclick = function() {
+      document.getElementById('popup-container').style.visibility = 'hidden';
+  };
+
 </script>
 
 {% endblock %}

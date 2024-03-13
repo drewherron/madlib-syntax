@@ -106,11 +106,11 @@ a, h1, h2 { color: #00008F; }
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #0776b7;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #0776b7;
 }
 
 input:checked + .slider:before {
@@ -125,4 +125,35 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+#help-icon-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+#popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+#popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
 }
