@@ -10,17 +10,27 @@ class SentenceGenerator:
         self.client = OpenAI(api_key=openai_api_key)
         self.themes = load_themes()
         self.sentence_tree_pairs = load_sentence_tree_pairs()
+        self.sentence_tree_pairs_arrows = load_sentence_tree_pairs("sentence_tree_pairs_arrows.json")
 
-    def generate_filled_sentence_and_tree(self):
-        # Select a pair randomly from the file
-        selected_pair = random.choice(self.sentence_tree_pairs)
+    def generate_filled_sentence_and_tree(self, arrow_flag):
+
+        if arrow_flag:
+            if random.random() > 0.0:
+                selected_list = self.sentence_tree_pairs_arrows
+            else:
+                selected_list = self.sentence_tree_pairs
+        else:
+            selected_list = self.sentence_tree_pairs
+
+        # Select a random sentence from the chosen list
+        selected_pair = random.choice(selected_list)
         print(selected_pair)
         selected_theme = random.choice(self.themes)
         print(selected_theme)
         # Send skeleton to GPT, get JSON back
         custom_prompt = [
                 {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": f"Given the sentence structure: '{selected_pair['skeleton']}', generate a word for each placeholder in angle brackets, to form a grammatically correct sentence with a general theme: {selected_theme}. Return the answer in JSON format, with the original placeholders as keys and your new words as values. Provide no additional information or explanation."}
+                {"role": "user", "content": f"Given the sentence structure: '{selected_pair['skeleton']}', generate a single word for each placeholder in angle brackets, to form a grammatically correct (natural-sounding) English sentence with a general theme: {selected_theme}. Return the answer in JSON format, with the original placeholders as keys and your new words as values. Provide no additional information or explanation."}
             ]
         print(custom_prompt)
         response = self.client.chat.completions.create(

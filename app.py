@@ -5,6 +5,7 @@ from tree_image import generate_syntax_tree_image
 from related_gif import fetch_gif_url
 #from tree_model import get_model
 import requests
+import time
 import uuid
 import os
 
@@ -14,6 +15,7 @@ generator = SentenceGenerator(openai_api_key=os.getenv('OPENAI_API_KEY'))
 
 @app.route('/')
 def index():
+    arrow_flag = flask.request.args.get('arrow_flag', 'false').lower() in ['true', '1', 'yes']
 
     sentence, tree_structure, tree_movement = None, None, None
     retry_delay = 2
@@ -21,7 +23,7 @@ def index():
     attempts = 0
 
     while sentence is None and attempts < max_retries:
-        sentence, tree_structure, tree_movement = generator.generate_filled_sentence_and_tree()
+        sentence, tree_structure, tree_movement = generator.generate_filled_sentence_and_tree(arrow_flag)
         if sentence is None:
             print("Failed fetching sentence, retrying...")
             time.sleep(retry_delay)
@@ -36,8 +38,8 @@ def index():
     # ?
     #model.insert(sentence, tree_image_path) #gif_path?
 
-    # Render the index page with the sentence and path to the syntax tree image
-    return flask.render_template('index.html', sentence=sentence, tree_image_path=tree_image_path, related_gif_url=related_gif_url)
+    # Render the index page
+    return flask.render_template('index.html', sentence=sentence, tree_image_path=tree_image_path, related_gif_url=related_gif_url, arrow_flag=arrow_flag)
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0',port=int(os.environ.get('PORT',5000)))
