@@ -1,11 +1,55 @@
 [
     {
-        "skeleton": "The <noun1> <simple_present_verb> the <adj> <noun2>",
-        "tree": "(CP (C' (C \u2205) (TP  (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T [-PAST]) (VP (V' (V <simple_present_verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adj>))) (N' (N <noun2>))))))))))))"
+        "skeleton": "The <noun1> <simple_present_verb> the <adjective> <noun2>",
+        "tree": "(CP (C' (C \u2205) (TP  (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T [-PAST]) V(P (V' (V <simple_present_verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adjective>))) (N' (N <noun2>))))))))))))"
     },
     {
-        "skeleton": "The <noun1> <simple_past_verb> the <adj> <noun2>",
-        "tree": "(CP (C' (C \u2205) (TP  (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T [+PAST]) (VP (V' (V <simple_past_verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adj>))) (N' (N <noun2>))))))))))))"
+        "skeleton": "The <noun1> <simple_past_verb> the <adjective> <noun2>",
+        "tree": "(CP (C' (C \u2205) (TP  (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T [+PAST]) (VP (V' (V <simple_past_verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adjective>))) (N' (N <noun2>))))))))))))"
+    },
+    {
+        "skeleton": "The <adjective1> <noun1> <simple_present_verb> the <adjective2> <noun2>",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D The) (NP (N' (AdjP (Adj' (Adj <adjective1>))) (N' (N <noun1>)))))) (T' (T [-PAST]) (VP (V' (V <simple_present_verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adjective2>))) (N' (N <noun2>))))))))))))"
+    },
+    {
+        "skeleton": "The <adjective1> <noun1> <simple_past_verb> the <adjective2> <noun2>",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D The) (NP (N' (AdjP (Adj' (Adj <adjective1>))) (N' (N <noun1>)))))) (T' (T [+PAST]) (VP (V' (V <simple_past_verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adjective2>))) (N' (N <noun2>))))))))))))"
+    },
+    {
+        "skeleton": "The <noun1> <adverb> <simple_present_verb> the <adjective> <noun2>",
+        "tree": "(CP (C' (C \u2205) (TP  (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T [-PAST]) (VP (V' (AdvP (Adv' (Adv <adverb>))) (V' (V <simple_present_verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adjective>))) (N' (N <noun2>)))))))))))))"
+    },
+    {
+        "skeleton": "The <noun1> <adverb> <simple_past_verb> the <adjective> <noun2>",
+        "tree": "(CP (C' (C \u2205) (TP  (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T [+PAST]) (VP (V' (AdvP (Adv' (Adv <adverb>))) (V' (V <simple_past_verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adjective>))) (N' (N <noun2>)))))))))))))"
+    },
+    {
+        "skeleton": "The <adjective1> <noun1> <adverb> <simple_present_verb> the <adjective2> <noun2>",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D The) (NP (N' (AdjP (Adj' (Adj <adjective1>))) (N' (N <noun1>)))))) (T' (T [-PAST]) (VP (V' (AdvP (Adv' (Adv <adverb>))) (V' (V <simple_present_verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adjective2>))) (N' (N <noun2>)))))))))))))"
+    },
+    {
+        "skeleton": "The <adjective1> <noun1> <adverb> <simple_past_verb> the <adjective2> <noun2>",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D The) (NP (N' (AdjP (Adj' (Adj <adjective1>))) (N' (N <noun1>)))))) (T' (T [+PAST]) (VP (V' (AdvP (Adv' (Adv <adverb>))) (V' (V <simple_past_verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adjective2>))) (N' (N <noun2>)))))))))))))"
+    },
+    {
+        "skeleton": "The <noun1> <simple_present_verb> the <adjective> <noun2> <adverb1> <adverb2>",
+        "tree": "(CP (C' (C \u2205) (TP  (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T [-PAST]) (VP (V'(V' (V <simple_present_verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adjective>))) (N' (N <noun2>))))))) (V' (AdvP (Adv' (AdvP (Adv' (Adv <adverb1>)))(Adv' (Adv <adverb2>)))))))))))",
+        "context": "adverb1 should show 'intensity' or 'extent', like 'very', 'somewhat', etc., modifying adverb2"
+    },
+    {
+        "skeleton": "The <noun1> <simple_past_verb> the <adjective> <noun2> <adverb1> <adverb2>",
+        "tree": "(CP (C' (C \u2205) (TP  (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T [+PAST]) (VP (V'(V' (V <simple_past_verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adjective>))) (N' (N <noun2>))))))) (V' (AdvP (Adv' (AdvP (Adv' (Adv <adverb1>)))(Adv' (Adv <adverb2>)))))))))))",
+        "context": "adverb1 should show 'intensity' or 'extent', like 'very', 'somewhat', etc., modifying adverb2"
+    },
+    {
+        "skeleton": "The <adjective1> <noun1> <simple_present_verb> the <adjective2> <noun2> <adverb1> <adverb2>",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D The) (NP (N' (AdjP (Adj' (Adj <adjective1>))) (N' (N <noun1>)))))) (T' (T [-PAST]) (VP (V'(V' (V <simple_present_verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adjective2>))) (N' (N <noun2>))))))) (V' (AdvP (Adv' (AdvP (Adv' (Adv <adverb1>)))(Adv' (Adv <adverb2>)))))))))))",
+        "context": "adverb1 should show 'intensity' or 'extent', like 'very', 'somewhat', etc., modifying adverb2"
+    },
+    {
+        "skeleton": "The <adjective1> <noun1> <simple_past_verb> the <adjective2> <noun2> <adverb1> <adverb2>",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D The) (NP (N' (AdjP (Adj' (Adj <adjective1>))) (N' (N <noun1>)))))) (T' (T [+PAST]) (VP (V'(V' (V <simple_past_verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adjective2>))) (N' (N <noun2>))))))) (V' (AdvP (Adv' (AdvP (Adv' (Adv <adverb1>)))(Adv' (Adv <adverb2>)))))))))))",
+        "context": "adverb1 should show 'intensity' or 'extent', like 'very', 'somewhat', etc., modifying adverb2"
     },
     {
         "skeleton": "The <noun1> <simple_present_verb> the <noun2>'s <noun3>",
@@ -18,5 +62,74 @@
     {
         "skeleton": "<pronoun> <modal_verb> <main_verb> <possessive_pronoun> <noun1>",
         "tree": "(CP (C' (C \u2205) (TP (DP (D' (D \u2205) (NP (N' (N <pronoun>))))) (T' (T <modal_verb>) (VP (V' (V <main_verb>) (DP (D' (D <possessive_pronoun>) (NP (N' (N <noun1>)))))))))))"
+    },
+    {
+        "skeleton": "<pronoun> <modal_verb> <main_verb> <possessive_pronoun> <noun1> is <adjective>",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D \u2205) (NP (N' (N <pronoun>))))) (T' (T <modal_verb>) (VP (V' (V <main_verb>) (CP (C' (C that) (TP (DP (D' (D <possessive_pronoun>) (NP (N' (N <noun1>))))) (T' (T [-PAST]) (VP (V' (V' (V is)) (AdjP (Adj' (Adj <adjective>)))))))))))))))",
+        "context": "For modal_verb: can, must, should, might, will, etc. 'That' here is a conjunction beween clauses."
+    },
+    {
+        "skeleton": "<persons_name> <simple_present_verb> the <noun>",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D \u2205) (NP (N' (N <persons_name>))))) (T' (T [-PAST]) (VP (V' (V <simple_present_verb>) (DP (D' (D the) (NP (N' (N <noun>)))))))))))"
+    },
+    {
+        "skeleton": "<persons_name> <simple_past_verb> the <noun>",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D \u2205) (NP (N' (N <persons_name>))))) (T' (T [+PAST]) (VP (V' (V <simple_past_verb>) (DP (D' (D the) (NP (N' (N <noun>)))))))))))"
+    },
+    {
+        "skeleton": "<determiner> <noun> <auxiliary_verb> <verb>",
+        "tree":"(CP (C' (C \u2205) (TP (DP (D' (D <determiner>) (NP (N' (N <noun>))))) (T' (T <auxiliary_verb>) (VP (V' (V <verb>)))))))"
+    },
+    {
+        "skeleton": "This <noun> <simple_present_verb> <adverb1> <adverb2>",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D This) (NP (N' (N <noun>))))) (T' (T [-PAST]) (VP (V' (V' (V <simple_present_verb>)) (AdvP (Adv' (AdvP (Adv' (Adv <adverb1>))) (Adv' (Adv <adverb2>))))))))))",
+        "context": "adverb1 should show 'intensity' or 'extent', like 'very', 'somewhat', etc., modifying adverb2"
+    },
+    {
+        "skeleton": "The <noun> <simple_past_verb> <adverb1> <adverb2>",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D The) (NP (N' (N <noun>))))) (T' (T [+PAST]) (VP (V' (V' (V <simple_past_verb>)) (AdvP (Adv' (AdvP (Adv' (Adv <adverb1>))) (Adv' (Adv <adverb2>))))))))))",
+        "context": "adverb1 should show 'intensity' or 'extent', like 'very', 'somewhat', etc., modifying adverb2"
+    },
+    {
+        "skeleton": "<person_name> <simple_present_verb> <preposition1> the <noun1> <preposition2> the <noun2> of the <noun3>",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D \u2205) (NP (N' (N <person_name>))))) (T' (T [-PAST]) (VP (V' (V' (V' (V <simple_present_verb>)) (PP (P' (P <preposition1>) (DP (D' (D the) (NP (N' (N <noun1>)))))))) (PP (P' (P <preposition2>) (DP (D' (D the) (NP (N' (N <noun2>)(PP (P' (P of)(DP (D' (D the) (NP (N' (N <noun3>)))))))))))))))))))"
+    },
+    {
+        "skeleton": "That <person_name> is <adjective1> <simple_present_verb> <pronoun>",
+        "tree": "(CP (C' (C \u2205) (TP (CP (C' (C That) (TP (DP (D' (D \u2205) (NP (N' (N <person_name>))))) (T' (T [-PAST]) (VP (V' (V is) (AdjP (Adj' (Adj <adjective1>))))))))) (T' (T [-PAST]) (VP (V' (V <simple_present_verb>) (DP (D' (D \u2205) (NP (N' (N <pronoun>)))))) )))))",
+        "context": "Consider 'That <person_name> is <adjective>' as a single unit acting as the subject of the sentence."
+    },
+    {
+        "skeleton": "The <noun1> <modal_verb1> <verb1> <conjunction> <noun2> <modal_verb2> <verb2>.",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T <modal_verb1>) (VP (V' (V <verb1>) (CP (C' (C <conjunction>) (TP (DP (D' (D \u2205) (NP (N' (N <noun2>))))) (T' (T <modal_verb2>) (VP (V' (V <verb2>)))))))",
+        "context": "For modal_verb: can, must, should, might, will, etc. For conjunction: if, when, but, whenever, etc."
+    },
+    {
+        "skeleton": "The <adjective> <noun1> <modal_verb1> <verb1> <conjunction> the <noun2> <modal_verb2> <verb2>.",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D The) (NP (N' (AdjP (Adj' (Adj <adjective>))) (N' (N <noun1>)))))) (T' (T <modal_verb1>) (VP (V' (V <verb1>) (CP (C' (C <conjunction>) (TP (DP (D' (D the) (NP (N' (N <noun2>))))) (T' (T <modal_verb2>) (VP (V' (V <verb2>)))))))))))))",
+        "context": "For modal_verb: can, must, should, might, will, etc. For conjunction: if, when, but, whenever, etc."
+    },
+    {
+        "skeleton": "The <noun1> <simple_present_verb> <adverb>, despite the <noun2>.",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T [-PAST]) (VP (V' (V' (V' (V <simple_present_verb>)) (AdvP (Adv' (Adv <adverb>)))) (PP (P' (P despite) (DP (D' (D the) (NP (N' (N <noun2>)))))))))))))"
+    },
+    {
+        "skeleton": "The <noun1> <simple_past_verb> <adverb>, despite the <noun2>.",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T [+PAST]) (VP (V' (V' (V' (V <simple_past_verb>)) (AdvP (Adv' (Adv <adverb>)))) (PP (P' (P despite) (DP (D' (D the) (NP (N' (N <noun2>)))))))))))))"
+    },
+    {
+        "skeleton": "<noun1> <modal_verb> <verb> <conjunction> the <noun2> <simple_present_verb> the <adjective> <noun3>.",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D \u2205) (NP (N' (N <noun1>))))) (T' (T <modal_verb>) (VP (V' (V' (V <verb>)) (CP (C' (C <conjunction>) (TP  (DP (D' (D the) (NP (N' (N <noun2>))))) (T' (T [-PAST]) (VP (V' (V <simple_present_verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adjective>))) (N' (N <noun3>))))))))))))))))))",
+        "context": "For modal_verb: can, must, should, might, will, etc. For conjunction: if, when, but, whenever, etc."
+    },
+    {
+        "skeleton": "<noun1> <modal_verb> <verb> <conjunction> the <noun2> <simple_present_verb>.",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D \u2205) (NP (N' (N <noun1>))))) (T' (T <modal_verb>) (VP (V' (V' (V <verb>)) (CP (C' (C <conjunction>) (TP  (DP (D' (D the) (NP (N' (N <noun2>))))) (T' (T [-PAST]) (VP (V' (V <simple_present_verb>)))))))))))))",
+        "context": "For modal_verb: can, must, should, might, will, etc. For conjunction: if, when, but, whenever, etc."
+    },
+    {
+        "skeleton": "<determiner> <noun1> <modal_verb> <verb> <conjunction> the <noun2> <simple_present_verb>.",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D <determiner>) (NP (N' (N <noun1>))))) (T' (T <modal_verb>) (VP (V' (V' (V <verb>)) (CP (C' (C <conjunction>) (TP  (DP (D' (D the) (NP (N' (N <noun2>))))) (T' (T [-PAST]) (VP (V' (V <simple_present_verb>)))))))))))))",
+        "context": "For modal_verb: can, must, should, might, will, etc. For conjunction: if, when, but, whenever, etc. For determiner: the, these, those, some, any, etc."
     }
 ]

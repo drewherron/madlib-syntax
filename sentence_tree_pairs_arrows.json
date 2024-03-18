@@ -3,5 +3,20 @@
         "skeleton": "Could <pronoun> be <progressive_verb>?",
         "tree": "(CP (C' (C Could) (TP (DP (D' (D \u2205) (NP (N' (N <pronoun>))))) (T' (T [-PAST]) (ProgP (Prog' (Prog be) (VP (V' (V <progressive_verb>)))))))))",
         "arrow": [[[0,1,1,0],[0,0]]]
+    },
+    {
+        "skeleton": "<aux_question_verb> <noun1> <verb> <preposition> <possessive_pronoun> <noun2>",
+        "tree": "(CP (C' (C <aux_question_verb>) (TP (DP (D' (D \u2205) (NP (N' (N <noun1>))))) (T' (T t) (VP (V' (V' (V <verb>)) (PP (P' (P <preposition>) (DP (D' (D <possessive_pronoun>) (NP (N' (N <noun2>?)))))))))))))",
+        "arrow": [[[0,1,1,0],[0,0]]]
+    },
+    {
+        "skeleton": "I MAY WANT TO NOT ADD SENTENCES AFTER WEEK 8 (NO V->T MOVEMENT?)",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D \u2205) (NP (N' (N Abbi))))) (T' (T was) (ProgP (Prog' (Prog t) (VP (V' (V eating) (DP (D' (D a) (NP (N' (N snack)))))))))))))",
+        "arrow": [[[0,1,1,1,0,0],[0,1,1,0]]]
+    },
+    {
+        "skeleton": "USE THIS?",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D \u2205) (NP (N' (N They))))) (T' (T were) (ProgP (Prog' (Prog t)(VP (V' (V' (V hugging) )  (PP (P' (P for) (DP (D' (D a) (NP (N' (AdjP (Adj' (Adj long)))(N' (N time))))))))))))))))",
+        "arrow": [[[0,1,1,1,0,0],[0,1,1,0]]]
     }
 ]
