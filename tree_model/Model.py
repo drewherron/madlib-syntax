@@ -1,4 +1,4 @@
-class Model():
+class Model:
     def select(self):
         """
         Gets all entries from the database
@@ -12,7 +12,7 @@ class Model():
         :param sentence: String
         :param tree_image_path: String
         :param gif_image_path: String
-        :param arrow_flag: Integer
+        :param arrow_flag: Boolean
         :return: True
         :raises: Database errors on connection and insertion
         """
