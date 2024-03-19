@@ -1,3 +1,5 @@
+wheel
+google-cloud-datastore
 flask
 gunicorn
 openai
