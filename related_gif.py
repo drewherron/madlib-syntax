@@ -10,13 +10,18 @@ def fetch_gif_url(query):
         'limit': 1,
         'rating': 'pg'
     }
-    response = requests.get(base_url, params=params)
-    if response.status_code == 200:
-        data = response.json()
-        if data['data']:
-            downsized = data['data'][0]['images']['downsized']['url']
-            return downsized
-    return None
+    try:
+        response = requests.get(base_url, params=params)
+        if response.status_code == 200:
+            data = response.json()
+            if data['data']:
+                downsized_url = data['data'][0]['images']['downsized']['url']
+                return downsized_url
+    except Exception as e:
+        print(f"Error fetching GIF from Giphy: {e}")
+
+    # If API fails, use default gif
+    return url_for('static', filename='images/default.gif')
 
 
 if __name__ == "__main__":
