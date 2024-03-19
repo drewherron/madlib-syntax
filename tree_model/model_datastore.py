@@ -26,7 +26,7 @@ def from_datastore(entity):
 
 class model:
     def __init__(self):
-        self.client = datastore.Client('your_project_id_here')
+        self.client = datastore.Client('syntax-trees')
         self.kind = 'SyntaxTree'
 
     def select(self):
