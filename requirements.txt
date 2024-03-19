@@ -8,3 +8,4 @@ openai
 nltk
 ipython
 requests
+svgwrite
