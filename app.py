@@ -17,10 +17,11 @@ model = get_model()
 @app.route('/')
 def index():
     arrow_flag = flask.request.args.get('arrow_flag', 'false').lower() in ['true', '1', 'yes']
-    database_chance = 1
+    database_chance = 0
 
     # Chance to use database instead of APIs
     if random.random() < database_chance:
+        print("Selecting random entry from database")
         sentence, tree_image_path, related_gif_url = model.select_random(arrow_flag=arrow_flag if arrow_flag else None)
         # TODO catch retrieval error here?
 
@@ -41,8 +42,8 @@ def index():
         tree_image_path = f"static/images/syntax_tree_{uuid.uuid4()}.svg"
         generate_syntax_tree_image(tree_structure, tree_movement, tree_image_path)
 
-        related_gif_url = fetch_gif_url(sentence)
-        #related_gif_url = "https://media.giphy.com/media/tU2mV8ALzJEdXAAwRo/giphy.gif"
+        #related_gif_url = fetch_gif_url(sentence)
+        related_gif_url = "https://media.giphy.com/media/tU2mV8ALzJEdXAAwRo/giphy.gif"
 
         # Send data to the model
         model.insert(sentence, tree_image_path, related_gif_url, arrow_flag)
