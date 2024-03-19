@@ -4,3 +4,4 @@ openai
 svgling
 nltk
 ipython
+requests
