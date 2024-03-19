@@ -1,5 +1,7 @@
 wheel
 google-cloud-datastore
+google-cloud-firestore
+rsa
 flask
 gunicorn
 openai
