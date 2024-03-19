@@ -35,8 +35,8 @@ class SentenceGenerator:
             ]
         print(custom_prompt)
         response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            #model="gpt-4",
+            #model="gpt-3.5-turbo",
+            model="gpt-4",
             messages=custom_prompt
         )
 
