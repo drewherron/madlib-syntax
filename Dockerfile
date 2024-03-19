@@ -11,7 +11,7 @@ COPY . /app
 WORKDIR /app
 
 # Install the Python packages specified by requirements.txt into the container
-RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - && apt update --allow-releaseinfo-change -y && apt install -y python3-pip && pip3 install -r requirements.txt && git clone -b leaf-edges https://github.com/drewherron/svgling.git
+RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - && apt update --allow-releaseinfo-change -y && apt install -y python3-pip && pip3 install -r requirements.txt && git clone -b leaf_edges https://github.com/drewherron/svgling.git
 
 
 # This is really just a reminder
