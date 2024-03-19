@@ -64,7 +64,7 @@
         "tree": "(CP (C' (C \u2205) (TP (DP (D' (D \u2205) (NP (N' (N <pronoun>))))) (T' (T <modal_verb>) (VP (V' (V <main_verb>) (DP (D' (D <possessive_pronoun>) (NP (N' (N <noun1>)))))))))))"
     },
     {
-        "skeleton": "<pronoun> <modal_verb> <main_verb> <possessive_pronoun> <noun1> is <adjective>.",
+        "skeleton": "<pronoun> <modal_verb> <main_verb> that <possessive_pronoun> <noun1> is <adjective>.",
         "tree": "(CP (C' (C \u2205) (TP (DP (D' (D \u2205) (NP (N' (N <pronoun>))))) (T' (T <modal_verb>) (VP (V' (V <main_verb>) (CP (C' (C that) (TP (DP (D' (D <possessive_pronoun>) (NP (N' (N <noun1>))))) (T' (T [-PAST]) (VP (V' (V' (V is)) (AdjP (Adj' (Adj <adjective>)))))))))))))))",
         "context": "For modal_verb: can, must, should, might, will, etc. 'That' here is a conjunction beween clauses."
     },
@@ -101,7 +101,7 @@
     },
     {
         "skeleton": "The <noun1> <modal_verb1> <verb1> <conjunction> <noun2> <modal_verb2> <verb2>.",
-        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T <modal_verb1>) (VP (V' (V <verb1>) (CP (C' (C <conjunction>) (TP (DP (D' (D \u2205) (NP (N' (N <noun2>))))) (T' (T <modal_verb2>) (VP (V' (V <verb2>)))))))",
+        "tree": "(CP (C' (C \u2205) (TP (DP (D' (D The) (NP (N' (N <noun1>))))) (T' (T <modal_verb1>) (VP (V' (V <verb1>) (CP (C' (C <conjunction>) (TP (DP (D' (D \u2205) (NP (N' (N <noun2>))))) (T' (T <modal_verb2>) (VP (V' (V <verb2>)))))))))))))",
         "context": "For modal_verb: can, must, should, might, will, etc. For conjunction: if, when, but, whenever, etc."
     },
     {
