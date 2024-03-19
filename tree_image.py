@@ -1,8 +1,8 @@
 # tree_image.py
 import sys
-sys.path.insert(0, '/home/drew/Projects/svgling')
+sys.path.insert(0, '/home/herrherron/svgling')
 import svgling
-sys.path.remove('/home/drew/Projects/svgling')
+sys.path.remove('/home/herrherron/svgling')
 print(svgling.__file__)
 from nltk.tree import Tree
 
