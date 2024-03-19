@@ -1,3 +1,4 @@
+from .Model import Model
 from google.cloud import datastore
 from datetime import datetime
 
