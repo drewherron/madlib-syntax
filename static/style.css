@@ -162,7 +162,20 @@ input:checked + .slider:before {
   padding: 20px;
   border-radius: 5px;
   max-width: 500px;
-  text-align: center;
+  color: #495142;
+  text-align: left;
+  position: relative;
+}
+
+#logo-container {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+#psu-logo {
+  width: 50px;
+  height: auto;
 }
 
 .hidden {

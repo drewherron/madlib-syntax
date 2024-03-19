@@ -49,8 +49,14 @@
 <!-- Popup container -->
 <div id="popup-container" class="hidden">
   <div id="popup-content">
-    <p>Information about the app will go here.</p>
+    <p>This is just a simple web app to create practice content for drawing X-bar syntax trees. When you've finished your tree, click the gif to reveal the answer.</p>
+    <p>WARNING: the sentences are created with some help from ChatGPT. There's always a chance the sentence will be ridiculous. Trees may not be perfect either. I'm working to improve it.</p>
+    <p>Contact: <a href="mailto:dherron@pdx.edu">dherron@pdx.edu</a></p>
     <button id="close-popup">Close</button>
+    <!-- Logo at the bottom right -->
+    <div id="logo-container">
+      <img src="{{ url_for('static', filename='images/psu_logo.jpg') }}" alt="PSU Logo" id="psu-logo">
+    </div>
   </div>
 </div>
 
