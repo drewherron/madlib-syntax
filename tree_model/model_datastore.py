@@ -48,17 +48,21 @@ class model:
 
     def select_random(self, arrow_flag=None):
         """
-        Selects a random entry from Datastore. Note: Datastore does not support
-        ORDER BY RANDOM(), so this fetches all relevant entities and selects one at random
-        in application code. For large datasets, consider an alternative approach.
+        Selects a random entry from the database.
         """
         query = self.client.query(kind=self.kind)
-        if arrow_flag is not None:
+
+        # If arrow_flag is False, only select
+        # entries where arrow_flag is also False
+        if arrow_flag is False:
             query.add_filter('arrow_flag', '=', arrow_flag)
+
         entities = list(query.fetch())
 
+        # Randomly select one entity if entities exist
         if entities:
-            from random import choice
-            selected = choice(entities)  # Randomly select one entity
+            selected = choice(entities)
             return from_datastore(selected)
-        return None
+
+        # Return tuple of None values if no entities are found
+        return None, None, None, None
