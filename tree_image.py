@@ -1,8 +1,8 @@
 # tree_image.py
 import sys
-sys.path.insert(0, '/home/herrherron/svgling')
+sys.path.insert(0, './svgling')
 import svgling
-sys.path.remove('/home/herrherron/svgling')
+sys.path.remove('./svgling')
 print(svgling.__file__)
 from nltk.tree import Tree
 
@@ -32,8 +32,8 @@ def generate_syntax_tree_image(tree_structure, tree_movement, output_filepath='s
 # For testing
 if __name__ == '__main__':
     filepath = "test_tree.svg"
-    test_tree_structure = "(CP (C' (C\n\u2205) (TP (DP (D' (D \u2205) (NP (N' (N She))))) (T' (T [-PAST]) (ProgP (Prog' (Prog is)  (VP (V' (AdvP (Adv' (Adv probably))) (V' (V' (V having) (DP (D' (D a) (NP (N' (N snack)))))) (PP (P' (P without) (DP (D' (D \u2205) (NP (N' (N me))))))))))))))))"
-
+    test_tree_structure = "(CP (C' (C \u2205) (TP (DP (D' (D This) (NP (N' (N <noun>))))) (T' (T [-PAST]) (VP (V' (V' (V <simple_present_verb>)) (AdvP (Adv' (AdvP (Adv' (Adv <adverb1>))) (Adv' (Adv <adverb2>))))))))))"
+    
     generate_syntax_tree_image(test_tree_structure, None, filepath)
     print(f"Saved the SVG of the provided tree structure to {filepath}.")
 

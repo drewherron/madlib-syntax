@@ -5,7 +5,6 @@ rsa
 flask
 gunicorn
 openai
-svgling
 nltk
 ipython
 requests
