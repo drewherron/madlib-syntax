@@ -11,32 +11,32 @@
     },
     {
         "skeleton": "Would the <noun1> <verb> the <adjective> <noun2>?",
-        "tree": "(CP (C' (C Would) (TP  (DP (D' (D the) (NP (N' (N <noun1>))))) (T' (T t) (VP (V' (V <verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adjective>))) (N' (N <noun2>))))))))))))",
+        "tree": "(CP (C' (C Would) (TP  (DP (D' (D the) (NP (N' (N <noun1>))))) (T' (T t) (VP (V' (V <verb>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adjective>))) (N' (N <noun2>))))))))))))",
         "arrow": [[[0,1,1,0],[0,0]]]
     },
     {
         "skeleton": "Can the <noun1> <verb> the <adjective> <noun2>?",
-        "tree": "(CP (C' (C Can) (TP  (DP (D' (D the) (NP (N' (N <noun1>))))) (T' (T t) (VP (V' (V <verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adjective>))) (N' (N <noun2>))))))))))))",
+        "tree": "(CP (C' (C Can) (TP  (DP (D' (D the) (NP (N' (N <noun1>))))) (T' (T t) (VP (V' (V <verb>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adjective>))) (N' (N <noun2>))))))))))))",
         "arrow": [[[0,1,1,0],[0,0]]]
     },
     {
         "skeleton": "Should the <adjective1> <noun1> <verb> the <adjective2> <noun2>?",
-        "tree": "(CP (C' (C Should) (TP (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adjective1>))) (N' (N <noun1>)))))) (T' (T t) (VP (V' (V <verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adjective2>))) (N' (N <noun2>))))))))))))",
+        "tree": "(CP (C' (C Should) (TP (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adjective1>))) (N' (N <noun1>)))))) (T' (T t) (VP (V' (V <verb>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adjective2>))) (N' (N <noun2>))))))))))))",
         "arrow": [[[0,1,1,0],[0,0]]]
     },
     {
         "skeleton": "Will the <adjective1> <noun1> <verb> <preposition> the <adjective2> <noun2>?",
-        "tree": "(CP (C' (C Can) (TP (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adjective1>))) (N' (N <noun1>)))))) (T' (T t) (VP (V' (V' (V <verb>)) (PP (P' (P <preposition>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adjective2>))) (N' (N <noun2>)))))))) ))))))",
+        "tree": "(CP (C' (C Can) (TP (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adjective1>))) (N' (N <noun1>)))))) (T' (T t) (VP (V' (V' (V <verb>)) (PP (P' (P <preposition>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adjective2>))) (N' (N <noun2>)))))))) ))))))",
         "arrow": [[[0,1,1,0],[0,0]]]
     },
     {
         "skeleton": "Will the <noun1> <adverb> <verb> a <adjective> <noun2>?",
-        "tree": "(CP (C' (C Will) (TP  (DP (D' (D the) (NP (N' (N <noun1>))))) (T' (T t) (VP (V' (AdvP (Adv' (Adv <adverb>))) (V' (V <verb>) (DP (D' (D a) (NP (N' (AdjP (Adj (Adj' <adjective>))) (N' (N <noun2>)))))))))))))",
+        "tree": "(CP (C' (C Will) (TP  (DP (D' (D the) (NP (N' (N <noun1>))))) (T' (T t) (VP (V' (AdvP (Adv' (Adv <adverb>))) (V' (V <verb>) (DP (D' (D a) (NP (N' (AdjP (Adj' (Adj <adjective>))) (N' (N <noun2>)))))))))))))",
         "arrow": [[[0,1,1,0],[0,0]]]
     },
     {
         "skeleton": "Will the <adjective1> <noun1> <verb> the <adjective2> <noun2>?",
-        "tree": "(CP (C' (C Will) (TP (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adjective1>))) (N' (N <noun1>)))))) (T' (T t) (VP (V' (V <verb>) (DP (D' (D the) (NP (N' (AdjP (Adj (Adj' <adjective2>))) (N' (N <noun2>))))))))))))",
+        "tree": "(CP (C' (C Will) (TP (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adjective1>))) (N' (N <noun1>)))))) (T' (T t) (VP (V' (V <verb>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adjective2>))) (N' (N <noun2>))))))))))))",
         "arrow": [[[0,1,1,0],[0,0]]]
     }
 ]
