@@ -40,7 +40,8 @@ class model(Model):
         cursor = connection.cursor()
         query = "SELECT sentence, tree_image_path, gif_image_path FROM syntax_trees"
 
-        # If arrow_flag is False, only select entries where arrow_flag is also False
+        # If arrow_flag is False, only select
+        # entries where arrow_flag is also False
         if arrow_flag == False:
             query += " WHERE arrow_flag = 0"
 
