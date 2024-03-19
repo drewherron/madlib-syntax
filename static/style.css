@@ -27,6 +27,12 @@ a, h1, h2 { color: #00008F; }
   padding: 0px;
 }
 
+.gif-container img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .tree-container h3 {
   text-align: left;
 }
@@ -36,6 +42,11 @@ a, h1, h2 { color: #00008F; }
     color: #666;
     margin-top: 10px;
     text-align: center;
+}
+
+.gif-size {
+  max-width: 500px;
+  height: auto;
 }
 
 .button-container {
