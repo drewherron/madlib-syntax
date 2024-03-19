@@ -42,8 +42,8 @@ def index():
         tree_image_path = f"static/images/syntax_tree_{uuid.uuid4()}.svg"
         generate_syntax_tree_image(tree_structure, tree_movement, tree_image_path)
 
-        #related_gif_url = fetch_gif_url(sentence)
-        related_gif_url = "https://media.giphy.com/media/tU2mV8ALzJEdXAAwRo/giphy.gif"
+        related_gif_url = fetch_gif_url(sentence)
+        #related_gif_url = "https://media.giphy.com/media/tU2mV8ALzJEdXAAwRo/giphy.gif"
 
         # Send data to the model
         model.insert(sentence, tree_image_path, related_gif_url, arrow_flag)
