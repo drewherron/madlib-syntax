@@ -1,7 +1,3 @@
 * Syntax Tree Generator
 
-https://syntax.herron.xyz/
-
-Just a note: the video went barely over 15 minutes. I increased the speed of the video a little bit, which you may notice... but it saves you some time.
-
-Also, the giphy API has a limit of calls per hour. When the call fails it reverts to a default gif. The video confirms that it works, if you keep getting the same image you may have to try again later.
+This web app uses ChatGPT to create a sentence, and then generates a linguistic syntax tree for that sentence. My plan is to simplify this and just use words randomly selected from Python lists... when I get around to it.
