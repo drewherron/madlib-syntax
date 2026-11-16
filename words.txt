@@ -1,0 +1,840 @@
+# Source word list for lexicon.json. Edit this file, then run:
+#     python build_lexicon.py
+#
+# Format
+#   [section]               starts a category (see madlib.py for the list)
+#   word                    one entry per line
+#   # comment               ignored; also allowed at the end of a line
+#
+# Nouns: the plural is generated. Override with  | pl=...
+#     cactus | pl=cacti
+#
+# Verbs: list the frames the verb can fill after a colon:
+#     vt    takes an object             (The goat ate the hat.)
+#     vi    no object                   (The goat sneezed.)
+#     vc    takes a that-clause         (She thinks that ...)
+#     vpsy  takes a clausal subject     (That Mo is purple annoys the goat.)
+#   Forms are generated. Override any of 3sg, past, prog:
+#     hiccup: vi | past=hiccuped prog=hiccuping
+#
+# Guidelines: concrete, countable, a bit silly, classroom-safe. Intransitive
+# verbs must sound complete on their own ("The goat sneezed.").
+
+[noun]
+accordion
+accountant
+acrobat
+alligator
+alpaca
+ambassador
+anteater
+apricot
+apron
+armadillo
+astronaut
+avocado
+bagel
+baguette
+ballerina
+balloon
+banana
+banjo
+barber
+bathtub
+beaver
+bicycle
+blender
+blimp
+blueberry
+bulldozer
+bumblebee
+burrito
+butler
+butterfly
+cabbage
+cactus | pl=cacti
+camel
+canoe
+carrot
+caterpillar
+cello
+chandelier
+cheetah
+chef
+chicken
+child
+chimney
+chipmunk
+clarinet
+clown
+coconut
+cowboy
+crab
+crayon
+crocodile
+croissant
+cucumber
+cupcake
+dentist
+detective
+dinosaur
+dolphin
+donkey
+donut
+dragon
+drummer
+duck
+dumpling
+eel
+eggplant
+elephant
+elf
+emperor
+emu
+envelope
+escalator
+ferret
+firefighter
+flamingo | pl=flamingos
+flashlight
+frog
+gargoyle
+giraffe
+gnome
+goat
+goblin
+goose
+gorilla
+grandfather
+grandmother
+grasshopper
+guitar
+hammock
+hamster
+harmonica
+hedgehog
+helicopter
+hippo
+igloo
+iguana
+inchworm
+jellyfish | pl=jellyfish
+kangaroo
+kazoo
+kitten
+knight
+koala
+ladder
+lemon
+lemur
+librarian
+lighthouse
+lizard
+llama
+lobster
+lumberjack
+magician
+mailbox
+mammoth
+mango
+marshmallow
+mattress
+meatball
+mermaid
+microwave
+mitten
+mongoose | pl=mongooses
+monkey
+moose
+mosquito
+mouse
+muffin
+mustache
+narwhal
+ninja
+noodle
+octopus
+ogre
+onion
+opossum
+orangutan
+ostrich
+otter
+oven
+owl
+oyster
+paddle
+pancake
+panda
+parrot
+peacock
+peanut
+pelican
+penguin
+pickle
+pigeon
+pineapple
+pirate
+platypus
+plumber
+poodle
+porcupine
+potato
+pretzel
+professor
+pumpkin
+puppet
+puppy
+rabbit
+raccoon
+radish
+referee
+rhino
+robot
+rooster
+sailor
+salamander
+sandwich
+sardine
+sausage
+saxophone
+scarecrow
+scientist
+seagull
+shark
+skateboard
+skunk
+sloth
+snail
+snowman
+sock
+spaceship
+spatula
+sponge
+squirrel
+starfish | pl=starfish
+submarine
+sunflower
+surfer
+swan
+taco
+tambourine
+tangerine
+tarantula
+teapot
+toaster
+tortoise
+toucan
+tractor
+trampoline
+troll
+trombone
+trumpet
+tuba | pl=tubas
+turnip
+turtle
+typewriter
+umbrella
+unicorn
+unicycle
+vacuum
+vampire
+violin
+volcano
+waffle
+waiter
+walnut
+walrus
+wizard
+wombat
+woodpecker
+xylophone
+yak
+yeti
+zebra
+zucchini | pl=zucchinis
+
+[verb]
+# transitive (some also intransitive)
+admire: vt
+adopt: vt
+babysit: vt vi | past=babysat
+bake: vt vi
+befriend: vt
+bite: vt
+borrow: vt
+bounce: vt vi
+bury: vt
+butter: vt
+carry: vt
+catch: vt
+chase: vt
+chew: vt vi
+climb: vt vi
+compliment: vt
+decorate: vt
+devour: vt
+drop: vt
+eat: vt vi
+feed: vt
+find: vt
+flip: vt
+fold: vt
+grab: vt
+greet: vt
+hide: vt vi
+hire: vt
+hug: vt
+hypnotize: vt
+ignore: vt
+inspect: vt
+interview: vt
+invite: vt
+juggle: vt vi
+kick: vt
+knit: vt vi | past=knitted
+lasso: vt
+launch: vt
+lick: vt
+lift: vt
+measure: vt
+nibble: vt vi
+nudge: vt
+outrun: vt
+paint: vt vi
+pat: vt
+photograph: vt
+pinch: vt
+poke: vt
+polish: vt
+pull: vt
+push: vt
+rescue: vt
+salute: vt vi
+scold: vt
+scratch: vt vi
+sell: vt
+serenade: vt
+shake: vt
+shampoo: vt
+shrink: vt vi
+sketch: vt vi
+smell: vt
+sniff: vt vi
+spin: vt vi
+splash: vt vi
+sprinkle: vt
+squeeze: vt
+stack: vt
+startle: vt
+steal: vt
+swallow: vt
+tackle: vt
+tame: vt
+teach: vt vi
+tease: vt
+throw: vt
+tickle: vt vpsy
+toss: vt
+trap: vt
+unwrap: vt
+vacuum: vt vi
+wash: vt
+wave: vt vi
+wrap: vt
+zap: vt
+
+# intransitive only
+bark: vi
+blush: vi
+burp: vi
+complain: vi vc
+cry: vi
+dance: vi
+faint: vi
+fidget: vi
+float: vi
+frown: vi
+gallop: vi
+giggle: vi
+glow: vi
+gossip: vi
+grin: vi
+grumble: vi
+hiccup: vi | past=hiccuped prog=hiccuping
+hop: vi
+howl: vi
+hum: vi
+jog: vi
+laugh: vi
+levitate: vi
+meditate: vi
+melt: vi
+moo: vi
+mumble: vi
+nap: vi
+panic: vi
+pout: vi
+purr: vi
+quack: vi
+shiver: vi
+shrug: vi
+sigh: vi
+sing: vi
+skip: vi
+sleep: vi
+slither: vi
+smile: vi
+sneeze: vi
+snore: vi
+somersault: vi
+sparkle: vi
+sprint: vi
+squeak: vi
+squeal: vi
+stumble: vi
+sulk: vi
+swim: vi
+tiptoe: vi
+tremble: vi
+twirl: vi
+vanish: vi
+waddle: vi
+wander: vi
+whistle: vi
+wiggle: vi
+wink: vi
+wobble: vi
+yawn: vi
+yodel: vi
+
+# take a that-clause
+announce: vc
+assume: vc
+believe: vc
+claim: vc
+declare: vc
+discover: vc
+dream: vc
+forget: vc
+guess: vc
+hope: vc
+imagine: vc
+insist: vc
+know: vc
+mention: vc
+notice: vc
+pretend: vc
+promise: vc
+realize: vc
+remember: vc
+say: vc
+suspect: vc
+think: vc
+whisper: vc
+
+# take a clausal subject (most also take an object)
+alarm: vt vpsy
+amaze: vt vpsy
+amuse: vt vpsy
+annoy: vt vpsy
+astonish: vt vpsy
+baffle: vt vpsy
+bewilder: vt vpsy
+bother: vt vpsy
+charm: vt vpsy
+confuse: vt vpsy
+delight: vt vpsy
+disappoint: vt vpsy
+embarrass: vt vpsy
+enchant: vt vpsy
+excite: vt vpsy
+fascinate: vt vpsy
+frighten: vt vpsy
+horrify: vt vpsy
+impress: vt vpsy
+intrigue: vt vpsy
+irritate: vt vpsy
+please: vt vpsy
+puzzle: vt vpsy
+shock: vt vpsy
+spook: vt vpsy
+surprise: vt vpsy
+thrill: vt vpsy
+upset: vt vpsy
+worry: vt vpsy vc
+
+[adj]
+absurd
+adorable
+ancient
+angry
+anxious
+awkward
+bald
+bashful
+bewildered
+bouncy
+brave
+breezy
+bumpy
+cheerful
+chubby
+clumsy
+confused
+crispy
+crooked
+crunchy
+cuddly
+curious
+dainty
+damp
+dizzy
+dramatic
+dusty
+eager
+eccentric
+elastic
+elegant
+emerald
+enchanted
+enormous
+envious
+exhausted
+fabulous
+fancy
+fearless
+feathery
+fierce
+flimsy
+fluffy
+frantic
+freckled
+frilly
+frozen
+fuzzy
+gentle
+giddy
+gigantic
+gloomy
+glorious
+glossy
+gooey
+gorgeous
+greasy
+green
+grumpy
+hairy
+haunted
+heroic
+hollow
+humble
+humongous
+hungry
+icy
+imaginary
+inflatable
+invisible
+itchy
+jolly
+jumpy
+lazy
+lonely
+loyal
+lumpy
+magnificent
+majestic
+mighty
+miniature
+moldy
+muddy
+musical
+mysterious
+nervous
+nosy
+obedient
+obnoxious
+odd
+oily
+orange
+outrageous
+oval
+overcooked
+overjoyed
+peculiar
+perky
+pink
+plump
+polite
+prickly
+puny
+purple
+quirky
+radioactive
+ridiculous
+rubbery
+rusty
+salty
+scaly
+scrawny
+shaggy
+shiny
+silly
+sleepy
+slippery
+smelly
+smug
+sneaky
+soggy
+sparkly
+spicy
+spiky
+splendid
+spotted
+squeaky
+squishy
+sticky
+striped
+stubborn
+suspicious
+tangled
+tidy
+timid
+tiny
+tremendous
+twinkly
+unusual
+weird
+whimsical
+wise
+wobbly
+wrinkly
+yellow
+zany
+zesty
+
+[adv]
+angrily
+anxiously
+awkwardly
+bravely
+briskly
+calmly
+carefully
+cautiously
+cheerfully
+clumsily
+curiously
+dramatically
+eagerly
+elegantly
+energetically
+enthusiastically
+fearlessly
+ferociously
+foolishly
+frantically
+furiously
+gently
+gleefully
+gloomily
+gracefully
+greedily
+grumpily
+happily
+hastily
+heroically
+hungrily
+innocently
+joyfully
+lazily
+loudly
+lovingly
+majestically
+merrily
+mysteriously
+nervously
+noisily
+obediently
+patiently
+playfully
+politely
+proudly
+quickly
+quietly
+rapidly
+recklessly
+rudely
+sadly
+secretly
+shyly
+silently
+sleepily
+slowly
+sneakily
+softly
+solemnly
+stubbornly
+suspiciously
+swiftly
+tenderly
+thoughtfully
+timidly
+triumphantly
+wearily
+wildly
+
+[adv_deg]
+absurdly
+awfully
+especially
+extremely
+fairly
+incredibly
+oddly
+quite
+rather
+remarkably
+ridiculously
+slightly
+somewhat
+surprisingly
+terribly
+truly
+unbelievably
+very
+wonderfully
+
+[name]
+Abigail
+Agatha
+Ahmed
+Alejandro
+Archibald
+Bartholomew
+Beatrix
+Boris
+Chidi
+Clementine
+Cornelius
+Delphine
+Desmond
+Dmitri
+Dolores
+Eloise
+Esperanza
+Ezekiel
+Fatima
+Florian
+Gertrude
+Gwendolyn
+Hamish
+Hiroshi
+Ignatius
+Imogen
+Ingrid
+Jasper
+Juniper
+Kofi
+Kwame
+Leopold
+Lucinda
+Mabel
+Magnus
+Marisol
+Mo
+Mortimer
+Nadia
+Nikolai
+Olu
+Oswald
+Penelope
+Percival
+Priya
+Quentin
+Ramona
+Rosalind
+Rufus
+Saoirse
+Svetlana
+Thaddeus
+Tobias
+Ulysses
+Valentina
+Wendell
+Winifred
+Xiomara
+Yuki
+Yusuf
+Zelda
+Zora
+
+[pron]
+I
+you
+he
+she
+it
+we
+they
+
+[poss]
+my
+your
+his
+her
+its
+our
+their
+
+[modal]
+can
+could
+will
+would
+should
+must
+might
+may
+
+[conj]
+if
+when
+whenever
+because
+although
+unless
+while
+before
+after
+
+[prep]
+above
+across
+around
+behind
+beneath
+beside
+inside
+near
+on
+under
+
+[det_sg]
+this
+that
+every
+each
+another
+any
+no
+
+[det_pl]
+these
+those
+some
+many
+several
+few
+all
+no
