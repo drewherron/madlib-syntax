@@ -1,0 +1,218 @@
+[
+  {
+    "id": "trans-present",
+    "skeleton": "The <noun.sg#1> <vt.3sg#1> the <adj#1> <noun.sg#2>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D The) (NP (N' (N <noun.sg#1>))))) (T' (T [-PAST]) (VP (V' (V <vt.3sg#1>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#2>))))))))))))"
+  },
+  {
+    "id": "trans-past",
+    "skeleton": "The <noun.sg#1> <vt.past#1> the <adj#1> <noun.sg#2>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D The) (NP (N' (N <noun.sg#1>))))) (T' (T [+PAST]) (VP (V' (V <vt.past#1>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#2>))))))))))))"
+  },
+  {
+    "id": "trans-adj-present",
+    "skeleton": "The <adj#1> <noun.sg#1> <vt.3sg#1> the <adj#2> <noun.sg#2>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D The) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#1>)))))) (T' (T [-PAST]) (VP (V' (V <vt.3sg#1>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#2>))) (N' (N <noun.sg#2>))))))))))))"
+  },
+  {
+    "id": "trans-adj-past",
+    "skeleton": "The <adj#1> <noun.sg#1> <vt.past#1> the <adj#2> <noun.sg#2>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D The) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#1>)))))) (T' (T [+PAST]) (VP (V' (V <vt.past#1>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#2>))) (N' (N <noun.sg#2>))))))))))))"
+  },
+  {
+    "id": "trans-preadverb-present",
+    "skeleton": "The <noun.sg#1> <adv#1> <vt.3sg#1> the <adj#1> <noun.sg#2>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D The) (NP (N' (N <noun.sg#1>))))) (T' (T [-PAST]) (VP (V' (AdvP (Adv' (Adv <adv#1>))) (V' (V <vt.3sg#1>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#2>)))))))))))))"
+  },
+  {
+    "id": "trans-preadverb-past",
+    "skeleton": "The <noun.sg#1> <adv#1> <vt.past#1> the <adj#1> <noun.sg#2>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D The) (NP (N' (N <noun.sg#1>))))) (T' (T [+PAST]) (VP (V' (AdvP (Adv' (Adv <adv#1>))) (V' (V <vt.past#1>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#2>)))))))))))))"
+  },
+  {
+    "id": "trans-adj-preadverb-present",
+    "skeleton": "The <adj#1> <noun.sg#1> <adv#1> <vt.3sg#1> the <adj#2> <noun.sg#2>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D The) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#1>)))))) (T' (T [-PAST]) (VP (V' (AdvP (Adv' (Adv <adv#1>))) (V' (V <vt.3sg#1>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#2>))) (N' (N <noun.sg#2>)))))))))))))"
+  },
+  {
+    "id": "trans-adj-preadverb-past",
+    "skeleton": "The <adj#1> <noun.sg#1> <adv#1> <vt.past#1> the <adj#2> <noun.sg#2>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D The) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#1>)))))) (T' (T [+PAST]) (VP (V' (AdvP (Adv' (Adv <adv#1>))) (V' (V <vt.past#1>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#2>))) (N' (N <noun.sg#2>)))))))))))))"
+  },
+  {
+    "id": "trans-degree-adverb-present",
+    "skeleton": "The <noun.sg#1> <vt.3sg#1> the <adj#1> <noun.sg#2> <adv_deg#1> <adv#1>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D The) (NP (N' (N <noun.sg#1>))))) (T' (T [-PAST]) (VP (V' (V' (V <vt.3sg#1>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#2>))))))) (AdvP (Adv' (AdvP (Adv' (Adv <adv_deg#1>))) (Adv' (Adv <adv#1>))))))))))"
+  },
+  {
+    "id": "trans-degree-adverb-past",
+    "skeleton": "The <noun.sg#1> <vt.past#1> the <adj#1> <noun.sg#2> <adv_deg#1> <adv#1>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D The) (NP (N' (N <noun.sg#1>))))) (T' (T [+PAST]) (VP (V' (V' (V <vt.past#1>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#2>))))))) (AdvP (Adv' (AdvP (Adv' (Adv <adv_deg#1>))) (Adv' (Adv <adv#1>))))))))))"
+  },
+  {
+    "id": "trans-adj-degree-adverb-present",
+    "skeleton": "The <adj#1> <noun.sg#1> <vt.3sg#1> the <adj#2> <noun.sg#2> <adv_deg#1> <adv#1>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D The) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#1>)))))) (T' (T [-PAST]) (VP (V' (V' (V <vt.3sg#1>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#2>))) (N' (N <noun.sg#2>))))))) (AdvP (Adv' (AdvP (Adv' (Adv <adv_deg#1>))) (Adv' (Adv <adv#1>))))))))))"
+  },
+  {
+    "id": "trans-adj-degree-adverb-past",
+    "skeleton": "The <adj#1> <noun.sg#1> <vt.past#1> the <adj#2> <noun.sg#2> <adv_deg#1> <adv#1>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D The) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#1>)))))) (T' (T [+PAST]) (VP (V' (V' (V <vt.past#1>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#2>))) (N' (N <noun.sg#2>))))))) (AdvP (Adv' (AdvP (Adv' (Adv <adv_deg#1>))) (Adv' (Adv <adv#1>))))))))))"
+  },
+  {
+    "id": "possessive-present",
+    "skeleton": "The <noun.sg#1> <vt.3sg#1> the <noun.sg#2>'s <noun.sg#3>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D The) (NP (N' (N <noun.sg#1>))))) (T' (T [-PAST]) (VP (V' (V <vt.3sg#1>) (DP (DP (D' (D the) (NP (N' (N <noun.sg#2>))))) (D' (D 's) (NP (N' (N <noun.sg#3>)))))))))))"
+  },
+  {
+    "id": "possessive-past",
+    "skeleton": "The <noun.sg#1> <vt.past#1> the <noun.sg#2>'s <noun.sg#3>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D The) (NP (N' (N <noun.sg#1>))))) (T' (T [+PAST]) (VP (V' (V <vt.past#1>) (DP (DP (D' (D the) (NP (N' (N <noun.sg#2>))))) (D' (D 's) (NP (N' (N <noun.sg#3>)))))))))))"
+  },
+  {
+    "id": "pronoun-modal-trans",
+    "skeleton": "<pron#1> <modal#1> <vt.base#1> <poss#1> <noun.sg#1>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D ∅) (NP (N' (N <pron#1>))))) (T' (T <modal#1>) (VP (V' (V <vt.base#1>) (DP (D' (D <poss#1>) (NP (N' (N <noun.sg#1>)))))))))))"
+  },
+  {
+    "id": "pronoun-modal-clause",
+    "skeleton": "<pron#1> <modal#1> <vc.base#1> that <poss#1> <noun.sg#1> is <adj#1>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D ∅) (NP (N' (N <pron#1>))))) (T' (T <modal#1>) (VP (V' (V <vc.base#1>) (CP (C' (C that) (TP (DP (D' (D <poss#1>) (NP (N' (N <noun.sg#1>))))) (T' (T [-PAST]) (VP (V' (V' (V is)) (AdjP (Adj' (Adj <adj#1>)))))))))))))))"
+  },
+  {
+    "id": "name-trans-present",
+    "skeleton": "<name#1> <vt.3sg#1> the <noun.sg#1>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D ∅) (NP (N' (N <name#1>))))) (T' (T [-PAST]) (VP (V' (V <vt.3sg#1>) (DP (D' (D the) (NP (N' (N <noun.sg#1>)))))))))))"
+  },
+  {
+    "id": "name-trans-past",
+    "skeleton": "<name#1> <vt.past#1> the <noun.sg#1>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D ∅) (NP (N' (N <name#1>))))) (T' (T [+PAST]) (VP (V' (V <vt.past#1>) (DP (D' (D the) (NP (N' (N <noun.sg#1>)))))))))))"
+  },
+  {
+    "id": "det-plural-modal-intrans",
+    "skeleton": "<det_pl#1> <noun.pl#1> <modal#1> <vi.base#1>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D <det_pl#1>) (NP (N' (N <noun.pl#1>))))) (T' (T <modal#1>) (VP (V' (V <vi.base#1>)))))))"
+  },
+  {
+    "id": "det-singular-modal-intrans",
+    "skeleton": "<det_sg#1> <noun.sg#1> <modal#1> <vi.base#1>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D <det_sg#1>) (NP (N' (N <noun.sg#1>))))) (T' (T <modal#1>) (VP (V' (V <vi.base#1>)))))))"
+  },
+  {
+    "id": "intrans-degree-adverb-present",
+    "skeleton": "This <noun.sg#1> <vi.3sg#1> <adv_deg#1> <adv#1>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D This) (NP (N' (N <noun.sg#1>))))) (T' (T [-PAST]) (VP (V' (V' (V <vi.3sg#1>)) (AdvP (Adv' (AdvP (Adv' (Adv <adv_deg#1>))) (Adv' (Adv <adv#1>))))))))))"
+  },
+  {
+    "id": "intrans-degree-adverb-past",
+    "skeleton": "The <noun.sg#1> <vi.past#1> <adv_deg#1> <adv#1>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D The) (NP (N' (N <noun.sg#1>))))) (T' (T [+PAST]) (VP (V' (V' (V <vi.past#1>)) (AdvP (Adv' (AdvP (Adv' (Adv <adv_deg#1>))) (Adv' (Adv <adv#1>))))))))))"
+  },
+  {
+    "id": "name-intrans-pp-chain",
+    "skeleton": "<name#1> <vi.3sg#1> <prep#1> the <noun.sg#1> <prep#2> the <noun.sg#2> of the <noun.sg#3>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D ∅) (NP (N' (N <name#1>))))) (T' (T [-PAST]) (VP (V' (V' (V' (V <vi.3sg#1>)) (PP (P' (P <prep#1>) (DP (D' (D the) (NP (N' (N <noun.sg#1>)))))))) (PP (P' (P <prep#2>) (DP (D' (D the) (NP (N' (N <noun.sg#2>)(PP (P' (P of)(DP (D' (D the) (NP (N' (N <noun.sg#3>)))))))))))))))))))"
+  },
+  {
+    "id": "clausal-subject",
+    "skeleton": "That <name#1> is <adj#1> <vpsy.3sg#1> the <noun.sg#1>.",
+    "tree": "(CP (C' (C ∅) (TP (CP (C' (C That) (TP (DP (D' (D ∅) (NP (N' (N <name#1>))))) (T' (T [-PAST]) (VP (V' (V is) (AdjP (Adj' (Adj <adj#1>))))))))) (T' (T [-PAST]) (VP (V' (V <vpsy.3sg#1>) (DP (D' (D the) (NP (N' (N <noun.sg#1>)))))))))))"
+  },
+  {
+    "id": "modal-subordinate-bare-plural",
+    "skeleton": "The <noun.sg#1> <modal#1> <vi.base#1> <conj#1> <noun.pl#2> <modal#2> <vi.base#2>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D The) (NP (N' (N <noun.sg#1>))))) (T' (T <modal#1>) (VP (V' (V <vi.base#1>) (CP (C' (C <conj#1>) (TP (DP (D' (D ∅) (NP (N' (N <noun.pl#2>))))) (T' (T <modal#2>) (VP (V' (V <vi.base#2>)))))))))))))"
+  },
+  {
+    "id": "adj-modal-subordinate",
+    "skeleton": "The <adj#1> <noun.sg#1> <modal#1> <vi.base#1> <conj#1> the <noun.sg#2> <modal#2> <vi.base#2>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D The) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#1>)))))) (T' (T <modal#1>) (VP (V' (V <vi.base#1>) (CP (C' (C <conj#1>) (TP (DP (D' (D the) (NP (N' (N <noun.sg#2>))))) (T' (T <modal#2>) (VP (V' (V <vi.base#2>)))))))))))))"
+  },
+  {
+    "id": "intrans-adverb-despite-present",
+    "skeleton": "The <noun.sg#1> <vi.3sg#1> <adv#1>, despite the <noun.sg#2>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D The) (NP (N' (N <noun.sg#1>))))) (T' (T [-PAST]) (VP (V' (V' (V' (V <vi.3sg#1>)) (AdvP (Adv' (Adv <adv#1>)))) (PP (P' (P despite) (DP (D' (D the) (NP (N' (N <noun.sg#2>)))))))))))))"
+  },
+  {
+    "id": "intrans-adverb-despite-past",
+    "skeleton": "The <noun.sg#1> <vi.past#1> <adv#1>, despite the <noun.sg#2>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D The) (NP (N' (N <noun.sg#1>))))) (T' (T [+PAST]) (VP (V' (V' (V' (V <vi.past#1>)) (AdvP (Adv' (Adv <adv#1>)))) (PP (P' (P despite) (DP (D' (D the) (NP (N' (N <noun.sg#2>)))))))))))))"
+  },
+  {
+    "id": "bare-plural-modal-subordinate-trans",
+    "skeleton": "<noun.pl#1> <modal#1> <vi.base#1> <conj#1> the <noun.sg#2> <vt.3sg#1> the <adj#1> <noun.sg#3>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D ∅) (NP (N' (N <noun.pl#1>))))) (T' (T <modal#1>) (VP (V' (V' (V <vi.base#1>)) (CP (C' (C <conj#1>) (TP (DP (D' (D the) (NP (N' (N <noun.sg#2>))))) (T' (T [-PAST]) (VP (V' (V <vt.3sg#1>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#3>))))))))))))))))))"
+  },
+  {
+    "id": "bare-plural-modal-subordinate-intrans",
+    "skeleton": "<noun.pl#1> <modal#1> <vi.base#1> <conj#1> the <noun.sg#2> <vi.3sg#2>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D ∅) (NP (N' (N <noun.pl#1>))))) (T' (T <modal#1>) (VP (V' (V' (V <vi.base#1>)) (CP (C' (C <conj#1>) (TP (DP (D' (D the) (NP (N' (N <noun.sg#2>))))) (T' (T [-PAST]) (VP (V' (V <vi.3sg#2>)))))))))))))"
+  },
+  {
+    "id": "det-plural-modal-subordinate",
+    "skeleton": "<det_pl#1> <noun.pl#1> <modal#1> <vi.base#1> <conj#1> the <noun.sg#2> <vi.3sg#2>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D <det_pl#1>) (NP (N' (N <noun.pl#1>))))) (T' (T <modal#1>) (VP (V' (V' (V <vi.base#1>)) (CP (C' (C <conj#1>) (TP (DP (D' (D the) (NP (N' (N <noun.sg#2>))))) (T' (T [-PAST]) (VP (V' (V <vi.3sg#2>)))))))))))))"
+  },
+  {
+    "id": "det-singular-modal-subordinate",
+    "skeleton": "<det_sg#1> <noun.sg#1> <modal#1> <vi.base#1> <conj#1> the <noun.sg#2> <vi.3sg#2>.",
+    "tree": "(CP (C' (C ∅) (TP (DP (D' (D <det_sg#1>) (NP (N' (N <noun.sg#1>))))) (T' (T <modal#1>) (VP (V' (V' (V <vi.base#1>)) (CP (C' (C <conj#1>) (TP (DP (D' (D the) (NP (N' (N <noun.sg#2>))))) (T' (T [-PAST]) (VP (V' (V <vi.3sg#2>)))))))))))))"
+  },
+  {
+    "id": "q-could-progressive",
+    "skeleton": "Could <pron#1> be <vi.prog#1>?",
+    "tree": "(CP (C' (C Could) (TP (DP (D' (D ∅) (NP (N' (N <pron#1>))))) (T' (T t) (ProgP (Prog' (Prog be) (VP (V' (V <vi.prog#1>)))))))))",
+    "arrow": [[[0, 1, 1, 0], [0, 0]]],
+    "tags": ["movement"]
+  },
+  {
+    "id": "q-modal-bare-plural-pp",
+    "skeleton": "<modal#1> <noun.pl#1> <vi.base#1> <prep#1> <poss#1> <noun.sg#2>?",
+    "tree": "(CP (C' (C <modal#1>) (TP (DP (D' (D ∅) (NP (N' (N <noun.pl#1>))))) (T' (T t) (VP (V' (V' (V <vi.base#1>)) (PP (P' (P <prep#1>) (DP (D' (D <poss#1>) (NP (N' (N <noun.sg#2>)))))))))))))",
+    "arrow": [[[0, 1, 1, 0], [0, 0]]],
+    "tags": ["movement"]
+  },
+  {
+    "id": "q-would-trans",
+    "skeleton": "Would the <noun.sg#1> <vt.base#1> the <adj#1> <noun.sg#2>?",
+    "tree": "(CP (C' (C Would) (TP (DP (D' (D the) (NP (N' (N <noun.sg#1>))))) (T' (T t) (VP (V' (V <vt.base#1>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#2>))))))))))))",
+    "arrow": [[[0, 1, 1, 0], [0, 0]]],
+    "tags": ["movement"]
+  },
+  {
+    "id": "q-can-trans",
+    "skeleton": "Can the <noun.sg#1> <vt.base#1> the <adj#1> <noun.sg#2>?",
+    "tree": "(CP (C' (C Can) (TP (DP (D' (D the) (NP (N' (N <noun.sg#1>))))) (T' (T t) (VP (V' (V <vt.base#1>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#2>))))))))))))",
+    "arrow": [[[0, 1, 1, 0], [0, 0]]],
+    "tags": ["movement"]
+  },
+  {
+    "id": "q-should-adj-trans",
+    "skeleton": "Should the <adj#1> <noun.sg#1> <vt.base#1> the <adj#2> <noun.sg#2>?",
+    "tree": "(CP (C' (C Should) (TP (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#1>)))))) (T' (T t) (VP (V' (V <vt.base#1>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#2>))) (N' (N <noun.sg#2>))))))))))))",
+    "arrow": [[[0, 1, 1, 0], [0, 0]]],
+    "tags": ["movement"]
+  },
+  {
+    "id": "q-will-adj-intrans-pp",
+    "skeleton": "Will the <adj#1> <noun.sg#1> <vi.base#1> <prep#1> the <adj#2> <noun.sg#2>?",
+    "tree": "(CP (C' (C Will) (TP (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#1>)))))) (T' (T t) (VP (V' (V' (V <vi.base#1>)) (PP (P' (P <prep#1>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#2>))) (N' (N <noun.sg#2>))))))))))))))",
+    "arrow": [[[0, 1, 1, 0], [0, 0]]],
+    "tags": ["movement"]
+  },
+  {
+    "id": "q-will-adverb-trans-article",
+    "skeleton": "Will the <noun.sg#1> <adv#1> <vt.base#1> <a#1> <adj#1> <noun.sg#2>?",
+    "tree": "(CP (C' (C Will) (TP (DP (D' (D the) (NP (N' (N <noun.sg#1>))))) (T' (T t) (VP (V' (AdvP (Adv' (Adv <adv#1>))) (V' (V <vt.base#1>) (DP (D' (D <a#1>) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#2>)))))))))))))",
+    "arrow": [[[0, 1, 1, 0], [0, 0]]],
+    "tags": ["movement"]
+  },
+  {
+    "id": "q-will-adj-trans",
+    "skeleton": "Will the <adj#1> <noun.sg#1> <vt.base#1> the <adj#2> <noun.sg#2>?",
+    "tree": "(CP (C' (C Will) (TP (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#1>))) (N' (N <noun.sg#1>)))))) (T' (T t) (VP (V' (V <vt.base#1>) (DP (D' (D the) (NP (N' (AdjP (Adj' (Adj <adj#2>))) (N' (N <noun.sg#2>))))))))))))",
+    "arrow": [[[0, 1, 1, 0], [0, 0]]],
+    "tags": ["movement"]
+  }
+]
